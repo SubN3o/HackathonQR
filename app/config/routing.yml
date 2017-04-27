@@ -1,0 +1,5 @@
+wcs_qdlmqt:
+    resource: "@WCSQdlmqtBundle/Controller/"
+    type:     annotation
+    prefix:   /
+

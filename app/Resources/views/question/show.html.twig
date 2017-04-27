@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Question</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ question.id }}</td>
+            </tr>
+            <tr>
+                <th>Niveau</th>
+                <td>{{ question.niveau }}</td>
+            </tr>
+            <tr>
+                <th>Reponse</th>
+                <td>{{ question.reponse }}</td>
+            </tr>
+            <tr>
+                <th>Validation</th>
+                <td>{{ question.validation }}</td>
+            </tr>
+            <tr>
+                <th>Indice</th>
+                <td>{{ question.indice }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('question_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('question_edit', { 'id': question.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}
