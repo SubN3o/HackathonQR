@@ -1,13 +1,19 @@
 {% extends 'base.html.twig' %}
+
 {% block title %}STEVE MCQUIZZ{% endblock %}
-{% block content %}
-    <div class="container">
+{% block body %}
+    <div class="container accueil">
         <div class="row">
             <div class="col-xs-12 logo">
-                <img src="img/stevemcquizz.svg" class="img-fluid" alt="Responsive image">
+                <img src="img/stevemcquizz.svg" class="rounded mx-auto d-block img-title" alt="Responsive image">
+                <h1 class="titre font-vintage text-center">STEVE MCQUIZZ</h1>
+
             </div>
-            <div class="col-xs-12 titre">
-                <h1 class="titre font-vintage">STEVE MCQUIZZ</h1>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <input class="btn btn-default btn-lg btn-block bouton font-vintage" type="submit" value="NOUVEAU JOUEUR">
+                <input class="btn btn-default btn-lg btn-block bouton font-vintage" type="submit" value="DEJA INSCRIT">
             </div>
         </div>
     </div>

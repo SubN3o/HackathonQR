@@ -2,6 +2,7 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
+   xmlns:osb="http://www.openswatchbook.org/uri/2009/osb"
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -15,9 +16,56 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="stevemcquizz.svg">
+   sodipodi:docname="stevemcquizz2.svg">
   <defs
      id="defs4">
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect6066"
+       is_visible="true"
+       bendpath="m 668.57143,923.79077 202.85714,0"
+       prop_scale="13"
+       scale_y_rel="false"
+       vertical="false" />
+    <linearGradient
+       id="linearGradient4594"
+       osb:paint="solid">
+      <stop
+         style="stop-color:#000000;stop-opacity:1;"
+         offset="0"
+         id="stop4596" />
+    </linearGradient>
+    <inkscape:path-effect
+       effect="ruler"
+       id="path-effect4592"
+       is_visible="true"
+       unit="px"
+       mark_distance="20"
+       mark_length="14"
+       minor_mark_length="7"
+       major_mark_steps="5"
+       shift="0"
+       offset="0"
+       mark_dir="left"
+       border_marks="both" />
+    <inkscape:path-effect
+       effect="envelope"
+       id="path-effect4590"
+       is_visible="true"
+       yy="true"
+       xx="true"
+       bendpath1="m 634.28571,951.63363 262.85715,0"
+       bendpath2="M 897.14286,951.63363 Z"
+       bendpath3="m 634.28571,951.63363 262.85715,0"
+       bendpath4="M 634.28571,951.63363 Z" />
+    <inkscape:path-effect
+       effect="bend_path"
+       id="path-effect4588"
+       is_visible="true"
+       bendpath="m 634.28571,951.63363 262.85715,0"
+       prop_scale="13"
+       scale_y_rel="true"
+       vertical="false" />
     <inkscape:path-effect
        effect="bend_path"
        id="path-effect4350"
@@ -35,7 +83,7 @@
      inkscape:pageopacity="0.11372549"
      inkscape:pageshadow="2"
      inkscape:zoom="0.35"
-     inkscape:cx="383.55798"
+     inkscape:cx="366.41512"
      inkscape:cy="494.20161"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -104,6 +152,38 @@
        style="fill:none;fill-rule:evenodd;stroke:#d4aa00;stroke-width:33.90027237;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
        d="m 345.78892,565.29134 152.88279,0 45.86484,48.82312"
        id="path4354"
+       inkscape:connector-curvature="0" />
+    <rect
+       style="opacity:0;fill:#554400;stroke:#000000;stroke-width:10.19999981;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1;fill-opacity:0.32156864"
+       id="rect6044"
+       width="294.28571"
+       height="37.142857"
+       x="625.71429"
+       y="912.36218" />
+    <path
+       style="fill:#806600;fill-rule:evenodd;stroke:#806600;stroke-width:10.31955147;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 845.71428,898.07649 131.42857,0"
+       id="path6069"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#806600;fill-rule:evenodd;stroke:#806600;stroke-width:13;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 532.85713,926.64792 208.57143,0"
+       id="path6069-6"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#806600;fill-rule:evenodd;stroke:#806600;stroke-width:10.65074444;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 30,836.3623 140,0"
+       id="path6069-7"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#806600;fill-rule:evenodd;stroke:#806600;stroke-width:10.54150295;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 61.428571,869.50507 137.142859,0"
+       id="path6069-6-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#806600;fill-rule:evenodd;stroke:#806600;stroke-width:9.50198269;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 321.42857,893.79079 111.42857,0"
+       id="path6069-6-3"
        inkscape:connector-curvature="0" />
   </g>
 </svg>
