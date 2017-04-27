@@ -1,3 +1,8 @@
+wcs_admin:
+    resource: "@WCSAdminBundle/Controller/"
+    type:     annotation
+    prefix:   /gestion/
+
 wcs_qdlmqt_question:
     resource: "@WCSQdlmqtBundle/Controller/QuestionController.php"
     type:     annotation
