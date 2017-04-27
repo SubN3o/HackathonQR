@@ -18,6 +18,7 @@ class AppKernel extends Kernel
             new FOS\UserBundle\FOSUserBundle(),
             new WCS\QdlmqtBundle\WCSQdlmqtBundle(),
             new WCS\UserBundle\UserBundle(),
+            new WCS\AdminBundle\WCSAdminBundle(),
         ];
 
         if (in_array($this->getEnvironment(), ['dev', 'test'], true)) {
