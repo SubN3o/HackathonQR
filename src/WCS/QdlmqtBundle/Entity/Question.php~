@@ -168,52 +168,5 @@ class Question
     {
         return $this->indice;
     }
-
-    /**
-     * Set question
-     *
-     * @param string $question
-     *
-     * @return Question
-     */
-    public function setQuestion($question)
-    {
-        $this->question = $question;
-
-        return $this;
-    }
-
-    /**
-     * Get question
-     *
-     * @return string
-     */
-    public function getQuestion()
-    {
-        return $this->question;
-    }
-
-    /**
-     * Set categorieId
-     *
-     * @param \WCS\QdlmqtBundle\Entity\Categorie $categorieId
-     *
-     * @return Question
-     */
-    public function setCategorieId(\WCS\QdlmqtBundle\Entity\Categorie $categorieId = null)
-    {
-        $this->categorie_id = $categorieId;
-
-        return $this;
-    }
-
-    /**
-     * Get categorieId
-     *
-     * @return \WCS\QdlmqtBundle\Entity\Categorie
-     */
-    public function getCategorieId()
-    {
-        return $this->categorie_id;
-    }
 }
+
