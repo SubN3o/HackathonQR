@@ -5,6 +5,12 @@
 .font-vintage{
     font-family: 'Vintage';
 }
+body{
+    background-color: #ffeeaa;
+}
+
+
+/*page d'accueil*/
 .img-title {
     margin-top: -5%;
     align-self: center;
@@ -18,24 +24,39 @@
     margin-top: 0;
     padding-top: 0;
 }
-body{
-    background-color: #ffeeaa;
-}
+
 @keyframes appear {
-    0%
+    0% {opacity:0;}
     20%{opacity:0;}
     100%{opacity:1;}
 }
-
+@keyframes precision{
+    0% {opacity:0;}
+    90%{opacity:0;}
+    100%{opacity:1;}
+}
+.precision{
+    animation-name: precision;
+    animation-duration: 7s;
+    font-size:2em;
+}
 .logo{
     animation-name: appear;
     animation-duration: 1s;
     margin-bottom: 5%;
 }
 .bouton{
-    width: 50px;
-    background-color: #d4aa0;
+    width: 30%;
+    background-color: #d4aa00;
     border: none;
+    margin-bottom: 3%;
+    font-size: 2em;
+}
+.boutons{
+    margin-left: 35%;
+    animation-name: appear;
+    animation-duration: 1s;
+    margin-bottom: 5%;
 }
 .bouton:hover {
     background-color: #c8beb7;
@@ -46,5 +67,12 @@ body{
 }
 .leftbutton{
     margin-right: 5%
+}
+/*fin page d'accueil*/
+
+/*page profil utilisateur*/
+.nav{
+    background-color: #d4aa00;
+    border: none;
 }
 
