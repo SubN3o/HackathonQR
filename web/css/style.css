@@ -65,7 +65,7 @@ body{
     font-size: 2em;
 }
 .boutons{
-    margin-left: 35%;
+    margin-left: 33%;
     animation-name: appear;
     animation-duration: 1s;
     margin-bottom: 5%;
@@ -84,15 +84,26 @@ body{
 
 /*page profil utilisateur*/
 .nav{
-    background-color: #24221c;
+    background-color: rgb(0,30,34)!important;
     opacity: 0.6;
     border: none;
+    height: 5%!important;
 }
 .bonjour {
-    font-size: 1.3em;
-    color: #aa8800;
+    font-size: 3em;
+    color: rgb(0,30,34);
     font-weight:bold;
     opacity: 1;
-    margin-right: 5%;
+    text-align: center;
+    margin-bottom:3%;
 }
+.stats{
+    color: rgb(0,30,34);
+    text-align: center;
+}
+.left{
+    border-right:1px solid rgb(0,30,34);
+}
+#g1{
 
+}
