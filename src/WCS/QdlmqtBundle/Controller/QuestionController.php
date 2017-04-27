@@ -17,7 +17,7 @@ class QuestionController extends Controller
     /**
      * Lists all question entities.
      *
-     * @Route("/", name="question_index")
+     * @Route("/question/", name="question_index")
      * @Method("GET")
      */
     public function indexAction()

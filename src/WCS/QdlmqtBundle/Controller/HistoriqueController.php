@@ -17,7 +17,7 @@ class HistoriqueController extends Controller
     /**
      * Lists all historique entities.
      *
-     * @Route("/", name="historique_index")
+     * @Route("/historique/", name="historique_index")
      * @Method("GET")
      */
     public function indexAction()
