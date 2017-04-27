@@ -8,6 +8,7 @@
             <tr>
                 <th>Id</th>
                 <th>Niveau</th>
+                <th>Question</th>
                 <th>Reponse</th>
                 <th>Validation</th>
                 <th>Indice</th>
@@ -19,6 +20,7 @@
             <tr>
                 <td><a href="{{ path('question_show', { 'id': question.id }) }}">{{ question.id }}</a></td>
                 <td>{{ question.niveau }}</td>
+                <td>{{ question.question }}</td>
                 <td>{{ question.reponse }}</td>
                 <td>{{ question.validation }}</td>
                 <td>{{ question.indice }}</td>
