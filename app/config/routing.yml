@@ -1,5 +1,16 @@
+wcs_qdlmqt_question:
+    resource: "@WCSQdlmqtBundle/Controller/QuestionController.php"
+    type:     annotation
+
+user:
+    resource: "@UserBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
 wcs_qdlmqt:
     resource: "@WCSQdlmqtBundle/Controller/"
     type:     annotation
     prefix:   /
 
+user_bundle:
+   resource: "@UserBundle/Resources/config/routing.yml"

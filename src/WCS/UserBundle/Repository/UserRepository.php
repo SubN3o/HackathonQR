@@ -1,6 +1,6 @@
 <?php
 
-namespace WCS\QdlmqtBundle\Repository;
+namespace WCS\UserBundle\Repository;
 
 /**
  * UserRepository
