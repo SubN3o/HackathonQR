@@ -104,6 +104,42 @@ body{
 .left{
     border-right:1px solid rgb(0,30,34);
 }
-#g1{
+.yiha{
+    margin-left:35%;
+    margin-bottom:10%;
+    margin-top: 5%;
+}
 
+@-webkit-keyframes shadow-drop-lr{
+    0%{box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}
+    100%{box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}
+}
+.themes{
+    background-color: #e5d699;
+    border-radius: 50%;
+    height: 120px;
+    width:120px;
+    margin:5%;
+    line-height:4.5em;
+    text-align: center;
+    font-size:1.8em;
+
+}
+.theme{
+}
+.themes:hover{
+    animation-name: shadow-drop-lr;
+    animation-duration: 0.4s;
+    box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)
+
+}
+.total{
+    font-size: 3em;
+    text-align: center;
+    color: #ff6600;
+    font-weight:bold;
+    margin-top: 3%;
+}
+.classement{
+    text-align: center;
 }
