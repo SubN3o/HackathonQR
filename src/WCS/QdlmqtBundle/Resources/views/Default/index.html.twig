@@ -1,1 +1,77 @@
-Hello World!
+{% extends 'base.html.twig' %}
+
+{% block title %}STEVE MCQUIZZ{% endblock %}
+{% block body %}
+    <div class="container accueil">
+        <div class="row">
+            <div class="col-xs-12 logo">
+                <img src="img/stevemcquizz2.svg" class="rounded mx-auto d-block img-title" alt="Responsive image">
+                <h1 class="titre font-vintage text-center">STEVE MCQUIZZ</h1>
+                <p class="precision font-vintage text-center">En fait la moto, parce que c'est une moto et pas un vélo (cf la selle, bien ouéj Julien), c'est pour faire référence à Steve Mcqueen (acteur américain qui aimait la moto) et donc du coup jeu de mot avec QUIZZ d'où STEVE MCQUIZZ (hilarité générale) Voilà voilà...</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 boutons">
+                <button type="button" class="btn btn-default btn-lg btn-block bouton font-vintage" data-toggle="modal" data-target="#new"type="submit">NOUVEAU JOUEUR</button>
+                <div class="modal fade" id="new" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">INSCRIS-TOI</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Pseudo</label>
+                                        <input type="password" class="form-control" id="pseudo" placeholder="Password">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Adresse e-mail</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Mot de passe</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Password">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">EN FAIT NON</button>
+                                <button type="button" class="btn btn-primary">YOUPI</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button type="button" class="btn btn-default btn-lg btn-block bouton font-vintage" data-toggle="modal" data-target="#connect"type="submit">DEJA INSCRIT</button>
+                <div class="modal fade" id="connect" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title" id="myModalLabel">CONNECTE-TOI</h4>
+                            </div>
+                            <div class="modal-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Adresse e-mail</label>
+                                        <input type="email" class="form-control" id="email" placeholder="Email">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Mot de passe</label>
+                                        <input type="password" class="form-control" id="password" placeholder="Password">
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">EN FAIT NON</button>
+                                <button type="button" class="btn btn-primary">J'AI LA GAGNE</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

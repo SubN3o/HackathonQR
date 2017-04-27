@@ -1,0 +1,78 @@
+@font-face {
+    font-family: 'Vintage';
+    src: url('../fonts/vintage.otf');
+}
+.font-vintage{
+    font-family: 'Vintage';
+}
+body{
+    background-color: #ffeeaa;
+}
+
+
+/*page d'accueil*/
+.img-title {
+    margin-top: -5%;
+    align-self: center;
+    width: 60%;
+    margin-left: 18%;
+}
+.titre {
+    font-weight: bold;
+    font-size: 5em;
+    color: #aa8800;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+@keyframes appear {
+    0% {opacity:0;}
+    20%{opacity:0;}
+    100%{opacity:1;}
+}
+@keyframes precision{
+    0% {opacity:0;}
+    90%{opacity:0;}
+    100%{opacity:1;}
+}
+.precision{
+    animation-name: precision;
+    animation-duration: 7s;
+    font-size:2em;
+}
+.logo{
+    animation-name: appear;
+    animation-duration: 1s;
+    margin-bottom: 5%;
+}
+.bouton{
+    width: 30%;
+    background-color: #d4aa00;
+    border: none;
+    margin-bottom: 3%;
+    font-size: 2em;
+}
+.boutons{
+    margin-left: 35%;
+    animation-name: appear;
+    animation-duration: 1s;
+    margin-bottom: 5%;
+}
+.bouton:hover {
+    background-color: #c8beb7;
+
+}
+.rightbutton{
+    margin-left:5%;
+}
+.leftbutton{
+    margin-right: 5%
+}
+/*fin page d'accueil*/
+
+/*page profil utilisateur*/
+.nav{
+    background-color: (85,58,0,0.6);
+    border: none;
+}
+
