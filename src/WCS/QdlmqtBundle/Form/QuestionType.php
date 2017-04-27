@@ -13,7 +13,7 @@ class QuestionType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('niveau')->add('reponse')->add('validation')->add('indice');
+        $builder->add('niveau')->add('question')->add('reponse')->add('validation')->add('indice')->add('categorie_id');
     }
     
     /**
