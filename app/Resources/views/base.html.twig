@@ -3,8 +3,9 @@
     <head>
         <meta charset="UTF-8" />
         <title>{% block title %}STEVE MCQUIZZ{% endblock %}</title>
+
         {% block stylesheets %}
-            <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
             <link href="{{ asset('css/style.css')}} " rel="stylesheet">
         {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
@@ -12,9 +13,8 @@
     <body>
         {% block body %}{% endblock %}
         {% block javascripts %}
-            <script src="js/jquery-3.1.1.min.js"></script>
-            <script src="bootstrap/js/bootstrap.min.js"></script>
-            <script src="js/script.js"></script>
+            <script src="{{  asset ('js/jquery-3.1.1.min.js')}}"></script>
+            <script src="{{ asset ('js/bootstrap.min.js')}}"></script>
         {% endblock %}
     </body>
 </html>

@@ -1,12 +1,42 @@
 {% extends 'base.html.twig' %}
-{% block title %}STEVE MCQUIZZ{% endblock %}
 {% block body %}
-    <nav class="navbar navbar-default nav">
-        <div class="container-fluid">
-            <div class="navbar-header nav">
-                <a href="front/profil.php"><img src="img/stevemcquizzmini.png" class="navbar-brand"></a>
-                </a>
+    <div class="container-fluid">
+        <nav class="navbar navbar-inverse nav">
+                <div class="navbar-header nav">
+                    <a href="front/profil.html.twig"><img src="img/stevemcquizzmini.png" class="navbar-brand"></a>
+                    </a>
+                </div>
+        </nav>
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="bonjour font-vintage">BONJOUR JOUEUR !</h1>
+                </div>
             </div>
-        </div>
-    </nav>
+            <div class="row">
+                <div class="col-md-6 hidden-sm hiden-xs left">
+                    <h2 class="font-vintage stats">TES STATS DE MABOUL</h2>
+                    <div id="g1"></div>
+                </div>
+                <div class="col-md-6 hidden-sm hidden-xs right">
+                    <h2 class="font-vintage stats">CHOISIS TON OU TES THEMES DE PREDILECTION</h2>
+                    
+                </div>
+            </div>
+    </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src={{ asset("js/script.js")}}></script>
+    <script src={{ asset("js/raphael-2.1.4.min.js")}}></script>
+    <script src={{ asset("js/justgage.js")}} ></script>
+    <script>
+         var g1 = new JustGage({
+             id: "g1",
+             value: 7,
+             min: 0,
+             max: 10,
+             title: "Thème1",
+         });
+
+</script>
 {% endblock %}
