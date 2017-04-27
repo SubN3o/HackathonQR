@@ -97,45 +97,5 @@ class Historique
     {
         return $this->points;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->categorie_id = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add categorieId
-     *
-     * @param \WCS\QdlmqtBundle\Entity\Categorie $categorieId
-     *
-     * @return Historique
-     */
-    public function addCategorieId(\WCS\QdlmqtBundle\Entity\Categorie $categorieId)
-    {
-        $this->categorie_id[] = $categorieId;
-
-        return $this;
-    }
-
-    /**
-     * Remove categorieId
-     *
-     * @param \WCS\QdlmqtBundle\Entity\Categorie $categorieId
-     */
-    public function removeCategorieId(\WCS\QdlmqtBundle\Entity\Categorie $categorieId)
-    {
-        $this->categorie_id->removeElement($categorieId);
-    }
-
-    /**
-     * Get categorieId
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCategorieId()
-    {
-        return $this->categorie_id;
-    }
 }
+

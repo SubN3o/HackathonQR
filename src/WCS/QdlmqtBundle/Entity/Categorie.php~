@@ -67,45 +67,5 @@ class Categorie
     {
         return $this->nom;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->questions = new \Doctrine\Common\Collections\ArrayCollection();
-    }
-
-    /**
-     * Add question
-     *
-     * @param \WCS\QdlmqtBundle\Entity\Question $question
-     *
-     * @return Categorie
-     */
-    public function addQuestion(\WCS\QdlmqtBundle\Entity\Question $question)
-    {
-        $this->questions[] = $question;
-
-        return $this;
-    }
-
-    /**
-     * Remove question
-     *
-     * @param \WCS\QdlmqtBundle\Entity\Question $question
-     */
-    public function removeQuestion(\WCS\QdlmqtBundle\Entity\Question $question)
-    {
-        $this->questions->removeElement($question);
-    }
-
-    /**
-     * Get questions
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getQuestions()
-    {
-        return $this->questions;
-    }
 }
+
