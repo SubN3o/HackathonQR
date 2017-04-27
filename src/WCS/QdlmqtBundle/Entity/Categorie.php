@@ -29,7 +29,7 @@ class Categorie
     private $nom;
 
     /**
-     * @ORM\OneToMany(targetEntity="Question", mappedBy="categorie")
+     * @ORM\OneToMany(targetEntity="Question", mappedBy="categorie_id")
      */
     private $questions;
 
