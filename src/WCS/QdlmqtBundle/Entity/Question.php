@@ -38,13 +38,6 @@ class Question
     /**
      * @var string
      *
-     * @ORM\Column(name="reponse", type="text")
-     */
-    private $reponse;
-
-    /**
-     * @var string
-     *
      * @ORM\Column(name="validation", type="text")
      */
     private $validation;
@@ -61,6 +54,10 @@ class Question
      */
     private $categorie_id;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Reponse", mappedBy="question_id")
+     */
+    private $reponses;
 
 
     /**
@@ -104,9 +101,10 @@ class Question
      *
      * @return Question
      */
-    public function setReponse($reponse)
+    public function setReponse(array $reponse)
     {
-        $this->reponse = $reponse;
+        $rep = serialize($reponse);
+        $this->reponse = $rep;
 
         return $this;
     }
@@ -215,5 +213,46 @@ class Question
     public function getCategorieId()
     {
         return $this->categorie_id;
+    }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->reponses = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add reponse
+     *
+     * @param \WCS\QdlmqtBundle\Entity\Reponse $reponse
+     *
+     * @return Question
+     */
+    public function addReponse(\WCS\QdlmqtBundle\Entity\Reponse $reponse)
+    {
+        $this->reponses[] = $reponse;
+
+        return $this;
+    }
+
+    /**
+     * Remove reponse
+     *
+     * @param \WCS\QdlmqtBundle\Entity\Reponse $reponse
+     */
+    public function removeReponse(\WCS\QdlmqtBundle\Entity\Reponse $reponse)
+    {
+        $this->reponses->removeElement($reponse);
+    }
+
+    /**
+     * Get reponses
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReponses()
+    {
+        return $this->reponses;
     }
 }
