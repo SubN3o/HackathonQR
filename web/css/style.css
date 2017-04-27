@@ -1,0 +1,14 @@
+@font-face {
+    font-family: "Vintage";
+    src: url("../fonts/vintage.otf")
+}
+.font-vintage{
+    font-size: 4em;
+}
+.titre {
+    font-weight: bold;
+    font-size: xx-large;
+    color: white;
+    margin-right: 290px;
+    text-align: center;
+}
