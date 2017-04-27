@@ -11,3 +11,8 @@ body {
     height: 150px;
     line-height: 150px;
 }
+
+footer {
+    background: #FFEEAA;
+    height: 50px;
+}
