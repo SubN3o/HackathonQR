@@ -14,4 +14,12 @@ class DefaultController extends Controller
     {
         return $this->render('WCSQdlmqtBundle:Default:index.html.twig');
     }
+
+    /**
+     * @Route("/challenge")
+     */
+    public function challengeAction()
+    {
+        return $this->render('WCSQdlmqtBundle:Challenge:challenge.html.twig');
+    }
 }
