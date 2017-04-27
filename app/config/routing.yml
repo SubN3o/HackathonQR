@@ -1,3 +1,7 @@
+wcs_qdlmqt_question:
+    resource: "@WCSQdlmqtBundle/Controller/QuestionController.php"
+    type:     annotation
+
 user:
     resource: "@UserBundle/Controller/"
     type:     annotation
