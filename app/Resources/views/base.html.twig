@@ -2,12 +2,19 @@
 <html>
     <head>
         <meta charset="UTF-8" />
-        <title>{% block title %}Qdlmqt{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <title>{% block title %}STEVE MCQUIZZ{% endblock %}</title>
+        {% block stylesheets %}
+            <link href="{{ asset('bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+            <link href="{{ asset('css/style.css')}} " rel="stylesheet">
+        {% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
     </head>
     <body>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block javascripts %}
+            <script src="js/jquery-3.1.1.min.js"></script>
+            <script src="bootstrap/js/bootstrap.min.js"></script>
+            <script src="js/script.js"></script>
+        {% endblock %}
     </body>
 </html>
