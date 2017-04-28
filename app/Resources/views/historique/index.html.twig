@@ -23,9 +23,6 @@
                         <li>
                             <a href="{{ path('historique_show', { 'id': historique.id }) }}">show</a>
                         </li>
-                        <li>
-                            <a href="{{ path('historique_edit', { 'id': historique.id }) }}">edit</a>
-                        </li>
                     </ul>
                 </td>
             </tr>
@@ -33,9 +30,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('historique_new') }}">Create a new historique</a>
-        </li>
-    </ul>
+    
 {% endblock %}

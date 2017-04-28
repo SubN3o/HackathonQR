@@ -29,10 +29,15 @@ class Categorie
     private $nom;
 
     /**
-     * @ORM\OneToMany(targetEntity="Question", mappedBy="categorie_id")
+     * @ORM\OneToMany(targetEntity="Question", mappedBy="categorie")
      */
     private $questions;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="Historique", mappedBy="categorie")
+     */
+    private $historiques;
 
     /**
      * Get id
@@ -107,5 +112,39 @@ class Categorie
     public function getQuestions()
     {
         return $this->questions;
+    }
+
+    /**
+     * Add historique
+     *
+     * @param \WCS\QdlmqtBundle\Entity\Historique $historique
+     *
+     * @return Categorie
+     */
+    public function addHistorique(\WCS\QdlmqtBundle\Entity\Historique $historique)
+    {
+        $this->historiques[] = $historique;
+
+        return $this;
+    }
+
+    /**
+     * Remove historique
+     *
+     * @param \WCS\QdlmqtBundle\Entity\Historique $historique
+     */
+    public function removeHistorique(\WCS\QdlmqtBundle\Entity\Historique $historique)
+    {
+        $this->historiques->removeElement($historique);
+    }
+
+    /**
+     * Get historiques
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getHistoriques()
+    {
+        return $this->historiques;
     }
 }
