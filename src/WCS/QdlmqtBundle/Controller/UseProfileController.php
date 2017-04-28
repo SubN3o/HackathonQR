@@ -20,6 +20,10 @@ class UseProfileController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('WCSQdlmqtBundle:front:profil.html.twig');
+        $user=$this->getUser();
+        $em = $this->getDoctrine()->getManager();
+        $categories = $em->getRepository('WCSQdlmqtBundle:Categorie')
+            ->findAll();
+        return $this->render('WCSQdlmqtBundle:front:profil.html.twig', array('categories'=>$categories, 'user'=>$user));
     }
 }
