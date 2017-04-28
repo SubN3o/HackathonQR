@@ -6,7 +6,7 @@
     font-family: 'Vintage';
 }
 body{
-    background-color: #ffeeaa;
+    background-color: white;
     background-image: url("../img/stevet.png");
     background-size: cover;
 }
@@ -105,6 +105,7 @@ body{
 .stats{
     color: rgb(0,30,34);
     text-align: center;
+    font-weight:bold;
 }
 .left{
     border-right:1px solid rgb(0,30,34);
@@ -140,7 +141,10 @@ body{
     animation-name: shadow-drop-lr;
     animation-duration: 0.4s;
     box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)
-
+}
+.theme:active{
+    color:red;
+    box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)
 }
 .total{
     font-size: 3em;
@@ -152,11 +156,16 @@ body{
 .classement{
     text-align: center;
     margin-top:10%;
+    font-weight:bold;
 }
 .checkbox{
     margin-top:50%;
+    font-weight:bold;
 }
-
+#g1{
+    color:#4c4733;
+    font-family: 'Vintage';
+}
 
 /*page challenge*/
 .categorie{
