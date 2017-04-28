@@ -10,4 +10,5 @@ namespace WCS\QdlmqtBundle\Repository;
  */
 class CategorieRepository extends \Doctrine\ORM\EntityRepository
 {
+
 }

@@ -117,15 +117,18 @@ body{
 .themes{
     background-color: #e5d699;
     border-radius: 50%;
-    height: 120px;
-    width:120px;
+    height: 200px;
+    width:200px;
     margin:5%;
-    line-height:4.5em;
     text-align: center;
     font-size:1.8em;
+    vertical-align: 5;
+    font-weight:lighter;
+    color:#4c4733;
 
 }
 .theme{
+    text-align:center;
 }
 .themes:hover{
     animation-name: shadow-drop-lr;
@@ -142,4 +145,13 @@ body{
 }
 .classement{
     text-align: center;
+    margin-top:10%;
+}
+.checkbox{
+    margin-top:50%;
+}
+input[type=checkbox] {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
 }
