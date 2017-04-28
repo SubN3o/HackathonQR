@@ -99,5 +99,28 @@ class Reponse
     {
         return $this->correct;
     }
-}
 
+    /**
+     * Set questionId
+     *
+     * @param \WCS\QdlmqtBundle\Entity\Question $questionId
+     *
+     * @return Reponse
+     */
+    public function setQuestionId(\WCS\QdlmqtBundle\Entity\Question $questionId = null)
+    {
+        $this->question_id = $questionId;
+
+        return $this;
+    }
+
+    /**
+     * Get questionId
+     *
+     * @return \WCS\QdlmqtBundle\Entity\Question
+     */
+    public function getQuestionId()
+    {
+        return $this->question_id;
+    }
+}

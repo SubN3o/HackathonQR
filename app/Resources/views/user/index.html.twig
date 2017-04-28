@@ -1,27 +1,25 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Historiques list</h1>
+    <h1>Users list</h1>
 
     <table>
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Niveau</th>
-                <th>Points</th>
+                <th>Score</th>
                 <th>Actions</th>
             </tr>
         </thead>
         <tbody>
-        {% for historique in historiques %}
+        {% for user in users %}
             <tr>
-                <td><a href="{{ path('historique_show', { 'id': historique.id }) }}">{{ historique.id }}</a></td>
-                <td>{{ historique.niveau }}</td>
-                <td>{{ historique.points }}</td>
+                <td><a href="{{ path('user_show', { 'id': user.id }) }}">{{ user.id }}</a></td>
+                <td>{{ user.score }}</td>
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('historique_show', { 'id': historique.id }) }}">show</a>
+                            <a href="{{ path('user_show', { 'id': user.id }) }}">show</a>
                         </li>
                     </ul>
                 </td>

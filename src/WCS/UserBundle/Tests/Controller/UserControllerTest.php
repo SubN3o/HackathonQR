@@ -1,10 +1,10 @@
 <?php
 
-namespace WCS\QdlmqtBundle\Tests\Controller;
+namespace WCS\UserBundle\Tests\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Test\WebTestCase;
 
-class ReponseControllerTest extends WebTestCase
+class UserControllerTest extends WebTestCase
 {
     /*
     public function testCompleteScenario()
@@ -13,8 +13,8 @@ class ReponseControllerTest extends WebTestCase
         $client = static::createClient();
 
         // Go to the list view
-        $crawler = $client->request('GET', '/reponse/');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /reponse/");
+        $crawler = $client->request('GET', '/user/');
+        $this->assertEquals(200, $client->getResponse()->getStatusCode(), "Unexpected HTTP status code for GET /user/");
 
         // Go to the show view
         $crawler = $client->click($crawler->selectLink('show')->link());

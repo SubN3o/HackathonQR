@@ -9,7 +9,6 @@
                 <th>Id</th>
                 <th>Niveau</th>
                 <th>Question</th>
-                <th>Reponse</th>
                 <th>Validation</th>
                 <th>Indice</th>
                 <th>Actions</th>
@@ -21,16 +20,12 @@
                 <td><a href="{{ path('question_show', { 'id': question.id }) }}">{{ question.id }}</a></td>
                 <td>{{ question.niveau }}</td>
                 <td>{{ question.question }}</td>
-                <td>{{ question.reponse }}</td>
                 <td>{{ question.validation }}</td>
                 <td>{{ question.indice }}</td>
                 <td>
                     <ul>
                         <li>
                             <a href="{{ path('question_show', { 'id': question.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('question_edit', { 'id': question.id }) }}">edit</a>
                         </li>
                     </ul>
                 </td>
@@ -39,9 +34,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('question_new') }}">Create a new question</a>
-        </li>
-    </ul>
+    
 {% endblock %}

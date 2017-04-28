@@ -5,7 +5,7 @@ namespace WCS\QdlmqtBundle\Controller;
 use WCS\QdlmqtBundle\Entity\Historique;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;use Symfony\Component\HttpFoundation\Request;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 
 /**
  * Historique controller.
@@ -17,7 +17,7 @@ class HistoriqueController extends Controller
     /**
      * Lists all historique entities.
      *
-     * @Route("/historique/", name="historique_index")
+     * @Route("/", name="historique_index")
      * @Method("GET")
      */
     public function indexAction()
@@ -32,32 +32,6 @@ class HistoriqueController extends Controller
     }
 
     /**
-     * Creates a new historique entity.
-     *
-     * @Route("/new", name="historique_new")
-     * @Method({"GET", "POST"})
-     */
-    public function newAction(Request $request)
-    {
-        $historique = new Historique();
-        $form = $this->createForm('WCS\QdlmqtBundle\Form\HistoriqueType', $historique);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->persist($historique);
-            $em->flush();
-
-            return $this->redirectToRoute('historique_show', array('id' => $historique->getId()));
-        }
-
-        return $this->render('historique/new.html.twig', array(
-            'historique' => $historique,
-            'form' => $form->createView(),
-        ));
-    }
-
-    /**
      * Finds and displays a historique entity.
      *
      * @Route("/{id}", name="historique_show")
@@ -65,72 +39,9 @@ class HistoriqueController extends Controller
      */
     public function showAction(Historique $historique)
     {
-        $deleteForm = $this->createDeleteForm($historique);
 
         return $this->render('historique/show.html.twig', array(
             'historique' => $historique,
-            'delete_form' => $deleteForm->createView(),
         ));
-    }
-
-    /**
-     * Displays a form to edit an existing historique entity.
-     *
-     * @Route("/{id}/edit", name="historique_edit")
-     * @Method({"GET", "POST"})
-     */
-    public function editAction(Request $request, Historique $historique)
-    {
-        $deleteForm = $this->createDeleteForm($historique);
-        $editForm = $this->createForm('WCS\QdlmqtBundle\Form\HistoriqueType', $historique);
-        $editForm->handleRequest($request);
-
-        if ($editForm->isSubmitted() && $editForm->isValid()) {
-            $this->getDoctrine()->getManager()->flush();
-
-            return $this->redirectToRoute('historique_edit', array('id' => $historique->getId()));
-        }
-
-        return $this->render('historique/edit.html.twig', array(
-            'historique' => $historique,
-            'edit_form' => $editForm->createView(),
-            'delete_form' => $deleteForm->createView(),
-        ));
-    }
-
-    /**
-     * Deletes a historique entity.
-     *
-     * @Route("/{id}", name="historique_delete")
-     * @Method("DELETE")
-     */
-    public function deleteAction(Request $request, Historique $historique)
-    {
-        $form = $this->createDeleteForm($historique);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-            $em = $this->getDoctrine()->getManager();
-            $em->remove($historique);
-            $em->flush();
-        }
-
-        return $this->redirectToRoute('historique_index');
-    }
-
-    /**
-     * Creates a form to delete a historique entity.
-     *
-     * @param Historique $historique The historique entity
-     *
-     * @return \Symfony\Component\Form\Form The form
-     */
-    private function createDeleteForm(Historique $historique)
-    {
-        return $this->createFormBuilder()
-            ->setAction($this->generateUrl('historique_delete', array('id' => $historique->getId())))
-            ->setMethod('DELETE')
-            ->getForm()
-        ;
     }
 }
