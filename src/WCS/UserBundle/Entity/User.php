@@ -46,7 +46,7 @@ class User extends BaseUser
      *
      * @return User
      */
-    public function setScore($score)
+    public function setScore($score=0)
     {
         $this->score = $score;
 
