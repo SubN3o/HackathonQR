@@ -214,4 +214,45 @@ class Question
     {
         return $this->categorie_id;
     }
+    /**
+     * Constructor
+     */
+    public function __construct()
+    {
+        $this->reponses = new \Doctrine\Common\Collections\ArrayCollection();
+    }
+
+    /**
+     * Add reponse
+     *
+     * @param \WCS\QdlmqtBundle\Entity\Reponse $reponse
+     *
+     * @return Question
+     */
+    public function addReponse(\WCS\QdlmqtBundle\Entity\Reponse $reponse)
+    {
+        $this->reponses[] = $reponse;
+
+        return $this;
+    }
+
+    /**
+     * Remove reponse
+     *
+     * @param \WCS\QdlmqtBundle\Entity\Reponse $reponse
+     */
+    public function removeReponse(\WCS\QdlmqtBundle\Entity\Reponse $reponse)
+    {
+        $this->reponses->removeElement($reponse);
+    }
+
+    /**
+     * Get reponses
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getReponses()
+    {
+        return $this->reponses;
+    }
 }

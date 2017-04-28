@@ -3,6 +3,7 @@
 namespace WCS\QdlmqtBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use WCS\UserBundle\Entity\User;
 
 /**
  * Historique
@@ -36,9 +37,14 @@ class Historique
     private $points;
 
     /**
-     * @ORM\OneToMany(targetEntity="Categorie", mappedBy="id")
+     * @ORM\ManyToOne(targetEntity="Categorie", inversedBy="historiques")
      */
-    private $categorie_id;
+    private $categorie;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="WCS\UserBundle\Entity\User", inversedBy="historiques")
+     */
+    private $user;
 
     /**
      * Get id
@@ -97,45 +103,7 @@ class Historique
     {
         return $this->points;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->categorie_id = new \Doctrine\Common\Collections\ArrayCollection();
-    }
 
-    /**
-     * Add categorieId
-     *
-     * @param \WCS\QdlmqtBundle\Entity\Categorie $categorieId
-     *
-     * @return Historique
-     */
-    public function addCategorieId(\WCS\QdlmqtBundle\Entity\Categorie $categorieId)
-    {
-        $this->categorie_id[] = $categorieId;
 
-        return $this;
-    }
 
-    /**
-     * Remove categorieId
-     *
-     * @param \WCS\QdlmqtBundle\Entity\Categorie $categorieId
-     */
-    public function removeCategorieId(\WCS\QdlmqtBundle\Entity\Categorie $categorieId)
-    {
-        $this->categorie_id->removeElement($categorieId);
-    }
-
-    /**
-     * Get categorieId
-     *
-     * @return \Doctrine\Common\Collections\Collection
-     */
-    public function getCategorieId()
-    {
-        return $this->categorie_id;
-    }
 }

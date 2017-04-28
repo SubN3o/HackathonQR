@@ -23,9 +23,6 @@
                         <li>
                             <a href="{{ path('reponse_show', { 'id': reponse.id }) }}">show</a>
                         </li>
-                        <li>
-                            <a href="{{ path('reponse_edit', { 'id': reponse.id }) }}">edit</a>
-                        </li>
                     </ul>
                 </td>
             </tr>
@@ -33,9 +30,5 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('reponse_new') }}">Create a new reponse</a>
-        </li>
-    </ul>
+    
 {% endblock %}

@@ -7,6 +7,11 @@
 }
 body{
     background-color: #ffeeaa;
+    background-image: url("../img/stevet.png");
+    background-size: cover;
+}
+.bg{
+
 }
 
 
@@ -104,6 +109,100 @@ body{
 .left{
     border-right:1px solid rgb(0,30,34);
 }
-#g1{
+.yiha{
+    margin-left:35%;
+    margin-bottom:10%;
+    margin-top: 5%;
+}
+
+@-webkit-keyframes shadow-drop-lr{
+    0%{box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}
+    100%{box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}
+}
+
+.themes{
+    background-color: #e5d699;
+    border-radius: 50%;
+    height: 120px;
+    width:120px;
+    margin:5%;
+    line-height:4.5em;
+    text-align: center;
+    font-size:1.8em;
 
 }
+.theme{
+}
+.themes:hover{
+    animation-name: shadow-drop-lr;
+    animation-duration: 0.4s;
+    box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)
+
+}
+.total{
+    font-size: 3em;
+    text-align: center;
+    color: #ff6600;
+    font-weight:bold;
+    margin-top: 3%;
+}
+.classement{
+    text-align: center;
+}
+
+/*page challenge*/
+.categorie{
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+.bloc{
+    top: 40px;
+    height: 500px;
+    background-color: #dfd095;
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0px #9f956a;
+    opacity: 0.8;
+}
+
+.question{
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+.patate{
+    bottom: 30px;
+    position: absolute;
+}
+
+.repab{
+    margin-top: 100px;
+}
+
+.repcd{
+    margin-top: 100px;
+}
+
+.clear{
+    height: 50px;
+}
+
+.indicateur{
+    top: 200px;
+    font-size: 30px;
+}
+
+.valeur{
+    top: 200px;
+    font-size: 50px;
+    color: red;
+}
+
+.quizz{
+    top: 100px;
+    position: absolute;
+    width: 97%;
+    opacity: 0.2;
+}
+

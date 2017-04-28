@@ -29,10 +29,15 @@ class Categorie
     private $nom;
 
     /**
-     * @ORM\OneToMany(targetEntity="Question", mappedBy="categorie_id")
+     * @ORM\OneToMany(targetEntity="Question", mappedBy="categorie")
      */
     private $questions;
 
+
+    /**
+     * @ORM\OneToMany(targetEntity="Historique", mappedBy="categorie")
+     */
+    private $historiques;
 
     /**
      * Get id

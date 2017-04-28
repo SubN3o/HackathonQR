@@ -1,3 +1,23 @@
+user_user:
+    resource: "@UserBundle/Controller/UserController.php"
+    type:     annotation
+
+wcs_qdlmqt_historique:
+    resource: "@WCSQdlmqtBundle/Controller/HistoriqueController.php"
+    type:     annotation
+
+wcs_qdlmqt_reponse:
+    resource: "@WCSQdlmqtBundle/Controller/ReponseController.php"
+    type:     annotation
+
+wcs_qdlmqt_question:
+    resource: "@WCSQdlmqtBundle/Controller/QuestionController.php"
+    type:     annotation
+
+wcs_qdlmqt_categorie:
+    resource: "@WCSQdlmqtBundle/Controller/CategorieController.php"
+    type:     annotation
+
 wcs_qdlmqt_reponse:
     resource: "@WCSQdlmqtBundle/Controller/ReponseController.php"
     type:     annotation

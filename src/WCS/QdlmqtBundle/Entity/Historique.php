@@ -3,6 +3,7 @@
 namespace WCS\QdlmqtBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use WCS\UserBundle\Entity\User;
 
 /**
  * Historique
@@ -36,9 +37,14 @@ class Historique
     private $points;
 
     /**
-     * @ORM\OneToMany(targetEntity="Categorie", mappedBy="id")
+     * @ORM\ManyToOne(targetEntity="Categorie", inversedBy="historiques")
      */
-    private $categorie_id;
+    private $categorie;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="WCS\UserBundle\Entity\User", inversedBy="historiques")
+     */
+    private $user;
 
     /**
      * Get id
@@ -97,45 +103,55 @@ class Historique
     {
         return $this->points;
     }
-    /**
-     * Constructor
-     */
-    public function __construct()
-    {
-        $this->categorie_id = new \Doctrine\Common\Collections\ArrayCollection();
-    }
+
+
+
 
     /**
-     * Add categorieId
+     * Set categorie
      *
-     * @param \WCS\QdlmqtBundle\Entity\Categorie $categorieId
+     * @param \WCS\QdlmqtBundle\Entity\Categorie $categorie
      *
      * @return Historique
      */
-    public function addCategorieId(\WCS\QdlmqtBundle\Entity\Categorie $categorieId)
+    public function setCategorie(\WCS\QdlmqtBundle\Entity\Categorie $categorie = null)
     {
-        $this->categorie_id[] = $categorieId;
+        $this->categorie = $categorie;
 
         return $this;
     }
 
     /**
-     * Remove categorieId
+     * Get categorie
      *
-     * @param \WCS\QdlmqtBundle\Entity\Categorie $categorieId
+     * @return \WCS\QdlmqtBundle\Entity\Categorie
      */
-    public function removeCategorieId(\WCS\QdlmqtBundle\Entity\Categorie $categorieId)
+    public function getCategorie()
     {
-        $this->categorie_id->removeElement($categorieId);
+        return $this->categorie;
     }
 
     /**
-     * Get categorieId
+     * Set user
      *
-     * @return \Doctrine\Common\Collections\Collection
+     * @param \WCS\UserBundle\Entity\User $user
+     *
+     * @return Historique
      */
-    public function getCategorieId()
+    public function setUser(\WCS\UserBundle\Entity\User $user = null)
     {
-        return $this->categorie_id;
+        $this->user = $user;
+
+        return $this;
+    }
+
+    /**
+     * Get user
+     *
+     * @return \WCS\UserBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
