@@ -7,6 +7,11 @@
 }
 body{
     background-color: #ffeeaa;
+    background-image: url("../img/stevet.png");
+    background-size: cover;
+}
+.bg{
+
 }
 
 
@@ -114,6 +119,7 @@ body{
     0%{box-shadow:0 0 0 0 transparent,0 0 0 0 transparent}
     100%{box-shadow:-12px 0 20px -12px rgba(0,0,0,.35),12px 0 20px -12px rgba(0,0,0,.35)}
 }
+
 .themes{
     background-color: #e5d699;
     border-radius: 50%;
@@ -143,3 +149,60 @@ body{
 .classement{
     text-align: center;
 }
+
+/*page challenge*/
+.categorie{
+    margin-top: 25px;
+    font-size: 30px;
+}
+
+.bloc{
+    top: 40px;
+    height: 500px;
+    background-color: #dfd095;
+    border: 2px;
+    border-radius: 10px;
+    box-shadow: 8px 8px 0px #9f956a;
+    opacity: 0.8;
+}
+
+.question{
+    padding-top: 50px;
+    font-size: 30px;
+}
+
+.patate{
+    bottom: 30px;
+    position: absolute;
+}
+
+.repab{
+    margin-top: 100px;
+}
+
+.repcd{
+    margin-top: 100px;
+}
+
+.clear{
+    height: 50px;
+}
+
+.indicateur{
+    top: 200px;
+    font-size: 30px;
+}
+
+.valeur{
+    top: 200px;
+    font-size: 50px;
+    color: red;
+}
+
+.quizz{
+    top: 100px;
+    position: absolute;
+    width: 97%;
+    opacity: 0.2;
+}
+
