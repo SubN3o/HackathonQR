@@ -6,7 +6,7 @@
         <div class="container-fluid font-vintage">
             <div class="row">
                 <div class="col-md-offset-5">
-                    <div class="categorie">Catégorie</div>
+                    <div class="categorie">Catégorie {{ categories.nom }}</div>
                 </div>
             </div>
         </div>
@@ -17,22 +17,23 @@
                 <div class="col-md-offset-2 col-md-1 col-xs-12">
                     <div class="row">
                         <div class="col-md-12 indicateur ">Niveau</div>
-                        <div class="col-md-12 valeur">2</div>
+                        <div class="col-md-12 valeur">{{ questions.niveau }}</div>
                     </div>
                 </div>
                 <div class="col-md-6 col-xs-12 bloc">
                     <img class="quizz" src="img/quizz.png">
-                    <div class="question">Question :</div>
+                    <div class="question">Question : {{ questions.question }}</div>
                     <div class="row">
                         <form action="challenge.html.twig" method="post" name="reponse">
                             <div class="repab">
-                                <div class="col-md-6"><input type="radio" name="pop" value="a">A :</div>
-                                <div class="col-md-6"><input type="radio" name="pop" value="b">B :</div>
+
+                                <div class="col-md-6"><input type="radio" name="pop" value="a">A : {{ reponses[0].reponse }}</div>
+                                <div class="col-md-6"><input type="radio" name="pop" value="b">B : {{ reponses[1].reponse }}</div>
                             </div>
                             <div class="clear"></div>
                             <div class="repcd">
-                                <div class="col-md-6"><input type="radio" name="pop" value="c">C :</div>
-                                <div class="col-md-6"><input type="radio" name="pop" value="d">D :</div>
+                                <div class="col-md-6"><input type="radio" name="pop" value="c">C : {{ reponses[2].reponse }}</div>
+                                <div class="col-md-6"><input type="radio" name="pop" value="d">D : {{ reponses[3].reponse }}</div>
                             </div>
                             <div class=" col-xs-offset-3 patate">
                                 <input type="submit"
